@@ -3,6 +3,7 @@
  let y = document.querySelector('.menuWrapPads');
  let z = document.querySelector('.note1');
  let v = document.querySelector('.note2');
+ let o = document.querySelector('#vkcom');
  /* Анимация кнопочки меню*/
  x.addEventListener('click', () => {
      document.getElementById('menuClicksnd').play();
@@ -12,7 +13,10 @@
      v.classList.toggle('note2_after');
     })
     
-    
+ /* ссылка Вк*/
+    o.addEventListener('click', ()=> {
+        
+    }) 
     
     
     
