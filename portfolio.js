@@ -3,6 +3,7 @@
  let y = document.querySelector('.menuWrapPads');
  let z = document.querySelector('.note1');
  let v = document.querySelector('.note2');
+ let o = document.querySelector('#vkcom');
  /* Анимация кнопочки меню*/
  x.addEventListener('click', () => {
      document.getElementById('menuClicksnd').play();
@@ -12,10 +13,13 @@
      v.classList.toggle('note2_after');
     })
     
+ /* ссылка Вк*/
+    o.addEventListener('click', ()=> {
+        
+    }) 
     
     
-    
-    
+  // Пробный Пуш!!! 1 !  
     /*function menuClick() {
     let y = document.querySelector('#menuWrapPads');
     document.getElementById('menuClicksnd').play(),
@@ -127,8 +131,8 @@ function openCalc() {
                 a += key;
                 out.textContent = a ;
             }
-                else if(a!=='' && b=='' && finish){
-                    b += key;
+                else if(a!=='' && b!=='' && finish){
+                    b = key;
                     finish = false;
                     out.textContent = b ;
                 } 
@@ -148,7 +152,9 @@ function openCalc() {
                 console.table(a, b, sign);
                 return;
             }
+            // Нажат знак =
             if(key === '=') {
+                if ( b==='') b = a ;
                 switch (sign){
                     case "+":
                         a = (+a) + (+b);
