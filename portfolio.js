@@ -100,8 +100,8 @@ function openCalc() {
     let finish = false;
     
     
-    const digit = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
-    const action = ['+', '-', '/', 'X'];
+    const digit = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.', 'DEL'];
+    const action = ['+', '-', '/', 'X' ];
 
     //Экран
     const out = document.querySelector('.monitorCalc .monitorWrapper p');
@@ -130,7 +130,7 @@ function openCalc() {
                 if(b==='' && sign==='') {
                 a += key;
                 out.textContent = a ;
-            }
+            }  
                 else if(a!=='' && b!=='' && finish){
                     b = key;
                     finish = false;
@@ -168,13 +168,16 @@ function openCalc() {
                     case "/":
                          a = a / b;
                         break;  
+                   /* case "DEL":
+                        a = a.valueOf.length - 1;
+                        break;*/
                 }
                 finish = true ;
                 out.textContent = a ;
                 console.table(a, b, sign);
             }
-
-        }
+           
+        } 
 
 
        
