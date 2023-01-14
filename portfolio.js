@@ -4,6 +4,7 @@
  let z = document.querySelector('.note1');
  let v = document.querySelector('.note2');
  let o = document.querySelector('#vkcom');
+ 
  /* Анимация кнопочки меню*/
  x.addEventListener('click', () => {
      document.getElementById('menuClicksnd').play();
@@ -100,11 +101,19 @@ function openCalc() {
     let finish = false;
     
     
-    const digit = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.', 'DEL'];
-    const action = ['+', '-', '/', 'X' ];
+    const digit = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
+    const action = ['+', '-', '/', 'X'];
 
     //Экран
     const out = document.querySelector('.monitorCalc .monitorWrapper p');
+    function delBtn(){
+        
+            if(a!=='') {
+        
+            out.textContent = a.length -1 ;
+        } 
+    
+    }
 
     function clearAll() {
         a =''; //первое число 
@@ -113,6 +122,7 @@ function openCalc() {
         finish = false;
         out.textContent = 0;
         }
+        let d = document.querySelector('.but.otric_btn').onclick = delBtn ;
         document.querySelector('.but.cllearAll_btn').onclick = clearAll;
         document.querySelector('.buttonsWrap').onclick = (event) => {
             // если попал между кнопок
@@ -168,9 +178,7 @@ function openCalc() {
                     case "/":
                          a = a / b;
                         break;  
-                   /* case "DEL":
-                        a = a.valueOf.length - 1;
-                        break;*/
+                    
                 }
                 finish = true ;
                 out.textContent = a ;
