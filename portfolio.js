@@ -91,15 +91,16 @@ wrp.addEventListener('click', function(){
         if (a!=='' && b==='') {
         a=a.slice(0,-1); 
         out.textContent = a;
-        
-        return
+                return
         }
         if(a===''){
         out.textContent = "Err";
+            return
         }
         if (b!=='' && a!=='') {
-            b= b.slice(0, -1);
+            b = b.slice(0, -1);
             out.textContent = b;
+            return
         }
         };
 
