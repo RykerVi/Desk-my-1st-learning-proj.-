@@ -18,33 +18,7 @@
         
     }) 
     
-    
-    
-    /*function menuClick() {
-    let y = document.querySelector('#menuWrapPads');
-    document.getElementById('menuClicksnd').play(),
-    
-    y.style.animation= 'menuWrapPads 1s forwards';
-    x.classList.toggle('open');
-}
-
-/* Анимация блокнотиков меню
-
-x.addEventListener('click',function(){
-    
-    /*x.classList.toggle('menuWrapPads_after');
-    y.style.animation= 'none';
-} )
-
-
-y.classList.toggle('menuWrapPads_after');
-    note1
-    note2
-    note1_after
-    note2_after
-*/
-
-
+  
 
 
  /* Анимация карандаша */
@@ -71,41 +45,40 @@ wrp.addEventListener('click', function(){
 
  /* Анимация выезда калькулятора */
 
-    let calculator = document.querySelector('.bgrndTr2');
-    let clsbtn = document.querySelector('.closeBtnWrp_after')
-    /*calculator.addEventListener('click',() => {
-        calculator.classList.toggle('bgrndTr2');
-        calculator.classList.toggle('bgrndTr2-afterAnimation');
-    }) */ 
+        let calculator = document.querySelector('.bgrndTr2');
 
-function openCalc() {
-    clsbtn.style.animation ="none";
-        calculator.style.animation = "bgrndTr2_after 1s forwards";
-        clsbtn.style.animation = "closeBtnWrp_anim 1.5s forwards"; 
-        
-    }
+        function openCalc() {
+            clsbtn.style.animation ="none";
+                calculator.style.animation = "bgrndTr2_after 1s forwards";
+                clsbtn.style.animation = "closeBtnWrp_anim 1.5s forwards"; 
+                
+            }
 
 
-    clsbtn.addEventListener('click', function(){
-        calculator.style.animation = "bgrndTr2_back  1s";
-        
-        clsbtn.style.animation ="none";
-    })
+ //кнопка закрытия кальк + закрытие кальк
+        let clsbtn = document.querySelector('.closeBtnWrp_after')
+   
+        clsbtn.addEventListener('click', function(){
+            calculator.style.animation = "bgrndTr2_back  1s";
+            
+            clsbtn.style.animation ="none";
+        })
 
-
+// Логика калькулятора
 
     let a = '' ; //первое число 
     let b = ''; //второе число 
     let sign = ''; //знак операции 
     let finish = false;
     
-    
+        
     const digit = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
     const action = ['+', '-', '/', 'X'];
 
     //Экран
     const out = document.querySelector('.monitorCalc .monitorWrapper p');
-
+    // Кнопка АС
+    document.querySelector('.but.cllearAll_btn').onclick = clearAll;
     function clearAll() {
         a =''; //первое число 
         b =''; //второе число 
@@ -113,23 +86,24 @@ function openCalc() {
         finish = false;
         out.textContent = 0;
         }
-        
-        document.querySelector('.but.otric_btn').onclick = (event) => {
-            if (a!=='') {
-                alert('должно удалять')
-                return
-            }
-            if(a===''){
-                out.textContent = "Err";
-            }
+    // Кнопка стирания Del 
+     document.querySelector('.but.otric_btn').onclick = (event) => {
+    if (a!=='') {
+      alert('должно удалять')
+     return
+    }
+    if(a===''){
+    out.textContent = "Err";
+    }
         };
-        document.querySelector('.but.cllearAll_btn').onclick = clearAll;
-        document.querySelector('.buttonsWrap').onclick = (event) => {
+
+    // Случайные нажатия мимо кнопок
+    document.querySelector('.buttonsWrap').onclick = (event) => {
             // если попал между кнопок
-            if (!event.target.classList.contains('but')) return; 
+    if (!event.target.classList.contains('but')) return; 
             
             //clearAll кнопка
-            if (event.target.classList.contains('but cllearAll_btn')) return;
+    if (event.target.classList.contains('but cllearAll_btn')) return;
            
            
             

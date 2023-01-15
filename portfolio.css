@@ -991,6 +991,7 @@
 
 }
 .but:active{
+    color: red;
     box-shadow:-0vw 0vh 0.1vw black;
     transition: 0.2s ease;
     transform: scale(0.99);
