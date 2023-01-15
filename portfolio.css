@@ -977,6 +977,7 @@
 }
 /*Кнопоки калькулятора*/
 .but {
+    
     cursor: pointer;
     font-size: 5vh;
     box-shadow:-0.2vw 0.1vh 0.4vw black;
@@ -988,7 +989,7 @@
 .but:hover{
     box-shadow:-0.1vw 0vh 0.2vw black;
     background-image: linear-gradient(to top right, rgb(126, 124, 124) 1%, white 90%);
-
+    
 }
 .but:active{
     color: red;
@@ -1279,6 +1280,7 @@
 
 
 .bgrndTr2 {
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1322,7 +1324,7 @@
             -ms-transform:scale(1.1) rotate(0deg) ;
             -o-transform:scale(1.1) rotate(0deg) ;
             box-shadow:inset 0px 0px 1vw 1px black, -0.2vw 0.2vw 0.5vw black;
-        
+            
             }
     }
 @keyframes bgrndTr2_back {
@@ -1337,9 +1339,12 @@
         -o-transform:scale(1.1) rotate(0deg) ;
         box-shadow:inset 0px 0px 1vw 1px black, -0.2vw 0.2vw 0.5vw black;
         
+
     }
     
     100% {
+        
+        
         right: -10vw;
         top: 10vh;
     }

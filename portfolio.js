@@ -88,13 +88,19 @@ wrp.addEventListener('click', function(){
         }
     // Кнопка стирания Del 
      document.querySelector('.but.otric_btn').onclick = (event) => {
-    if (a!=='') {
-      alert('должно удалять')
-     return
-    }
-    if(a===''){
-    out.textContent = "Err";
-    }
+        if (a!=='' && b==='') {
+        a=a.slice(0,-1); 
+        out.textContent = a;
+        
+        return
+        }
+        if(a===''){
+        out.textContent = "Err";
+        }
+        if (b!=='' && a!=='') {
+            b= b.slice(0, -1);
+            out.textContent = b;
+        }
         };
 
     // Случайные нажатия мимо кнопок
