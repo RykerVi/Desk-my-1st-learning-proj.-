@@ -113,6 +113,16 @@ function openCalc() {
         finish = false;
         out.textContent = 0;
         }
+        
+        document.querySelector('.but.otric_btn').onclick = (event) => {
+            if (a!=='') {
+                alert('должно удалять')
+                return
+            }
+            if(a===''){
+                out.textContent = "Err";
+            }
+        };
         document.querySelector('.but.cllearAll_btn').onclick = clearAll;
         document.querySelector('.buttonsWrap').onclick = (event) => {
             // если попал между кнопок
