@@ -4,6 +4,7 @@
  let z = document.querySelector('.note1');
  let v = document.querySelector('.note2');
  let o = document.querySelector('#vkcom');
+ let g = document.querySelector('#github');
  /* Анимация кнопочки меню*/
  x.addEventListener('click', () => {
      document.getElementById('menuClicksnd').play();
@@ -15,9 +16,14 @@
     
  /* ссылка Вк*/
     o.addEventListener('click', ()=> {
+        window.open('https://vk.com/vivvpage' , '_blank')
         
     }) 
-    
+ /* ссылка Github*/  
+    g.addEventListener('click', ()=> {
+        window.open('https://github.com/RykerVi' , '_blank')
+        
+    }) 
   
 
 
@@ -122,8 +128,8 @@ wrp.addEventListener('click', function(){
                 a += key;
                 out.textContent = a ;
             }
-                else if(a!=='' && b=='' && finish){
-                    b += key;
+                else if(a!=='' && b!=='' && finish){
+                    b = key;
                     finish = false;
                     out.textContent = b ;
                 } 
@@ -132,7 +138,7 @@ wrp.addEventListener('click', function(){
                 else {    
                     b += key;
                     out.textContent = b ;
-                    console.table(a, b, sign);
+                    console.table(a, sign , b);
                 }
                 return;
             }
@@ -155,6 +161,13 @@ wrp.addEventListener('click', function(){
                         a = a * b;
                         break;
                     case "/":
+                        if (b === '0'){
+                            out.textContent = 'Err';
+                            a = '';
+                            b='';
+                            sign = '';
+                            return;
+                        }
                          a = a / b;
                         break;  
                 }

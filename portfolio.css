@@ -994,16 +994,16 @@
 .but:active{
     color: red;
     box-shadow:-0vw 0vh 0.1vw black;
-    transition: 0.2s ease;
+    transition: 0.1s ease;
     transform: scale(0.99);
     -webkit-transform: scale(0.99);
     -moz-transform: scale(0.99);
     -ms-transform: scale(0.99);
     -o-transform: scale(0.99);
-    -webkit-transition: 0.2s ease;
-    -moz-transition: 0.2s ease;
-    -ms-transition: 0.2s ease;
-    -o-transition: 0.2s ease;
+    -webkit-transition: 0.1s ease;
+    -moz-transition: 0.1s ease;
+    -ms-transition: 0.1s ease;
+    -o-transition: 0.1s ease;
 }
 .but.num_1, .but.num_2,.but.num_3{
     border-radius:1vw;
