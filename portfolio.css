@@ -1628,4 +1628,22 @@
         -ms-transform: rotate(0deg);
         -o-transform: rotate(0deg);
     }
-    
+    .autWr {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        bottom: 0.3vh;
+        left: 8.5vw;
+        
+        width:12vw;
+        height: 2vh;
+        font-size: 2vh;
+        font-family: Comic Sans MS ;
+    }
+    .aut{
+        color: rgb(207, 207, 207);
+        text-shadow: 0vw 0vw 0.2vw black;
+        position: absolute;
+        letter-spacing: 2vw;
+    }
